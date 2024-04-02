@@ -18,12 +18,12 @@ public class MainActivity extends AppCompatActivity {//a classe mainActivity e a
         btnEnviar.setOnClickListener(new View.OnClickListener() {//define o que vai acontecer quando o botao e clicado
 
             @Override
-            public void onClick(View v) {//e executado quando o botao for clicado
-                EditText etDigiteAqui = findViewById(R.id.etDigiteAqui);//obtem o elemento de interface etDigiteAqui pelo id
+            public void onClick(View v) {//executado quando o botao for clicado
+                EditText etDigiteAqui = findViewById(R.id.etDigiteAqui);//obtem o elemento de interface etDigiteAqui/campo de texto
                 String textoDigitado = etDigiteAqui.getText().toString();//pega o texto do etDigiteAqui e converte para string
-                Intent i = new Intent(MainActivity.this,NextActivity.class);//cria uma intenção, em que sinaliza a navegação de uma tela à outra
-                i.putExtra("texto",textoDigitado);//passa o texto dentro do intent
-                startActivity(i);//executa a activity
+                Intent i = new Intent(MainActivity.this,NextActivity.class);//cria uma intenção, em que sinaliza a navegação de uma tela para outra
+                i.putExtra("texto",textoDigitado);//passa o textoDigitado para dentro do intent
+                startActivity(i);//inicia a activity e passa como parametro a intent i
 
             }
         });
